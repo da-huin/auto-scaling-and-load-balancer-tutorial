@@ -1,3 +1,30 @@
+
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="./static/icon.png" alt="Project logo" ></a>
+ <br>
+
+ 
+</p>
+
+<h3 align="center">Load Balancer and Auto Scaling Tutorial</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/da-huin/load-balancer-and-auto-scaling-tutorial.svg)](https://github.com/da-huin/load-balancer-and-auto-scaling-tutorial/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/da-huin/load-balancer-and-auto-scaling-tutorial.svg)](https://github.com/da-huin/load-balancer-and-auto-scaling-tutorial/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+---
+
+<p align="center"> 
+    <br> In this article, we will learn how to set up Load Balancer and Auto Scaling.
+
+</p>
+
 ## Set up Load Balancer
 
 **What is Load Balancer?**
@@ -102,7 +129,17 @@
 
 ## Set up Auto Scaling.
 
-1. Connect your fisrt instance with SSH and enter the command below for AMI.
+**What is Auto Scaling?**
+
+* Auto Scaling divides the processing by horizontally expanding the instance when it is difficult to process alone in a instance. 
+
+    ![](./static/as-basic-diagram.png)
+
+* Details Refer to https://docs.aws.amazon.com/ko_kr/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html
+
+### **Tutorial**
+
+1. **Connect your fisrt instance with SSH and enter the command below for AMI.**
 
     ```
     vim /home/ubuntu/run_http.sh
@@ -111,16 +148,16 @@
     /usr/bin/python3.6m -m http.server 80&
     ```
 
-1. Create an AMI with your fisrt instance for `Auto Scaling Instance`.
+1. **Create an AMI with your fisrt instance for `Auto Scaling Instance`.**
 
     ![](./static/20200822_162943.png)
     ![](./static/20200822_163009.png)
 
-1. check created AMI.
+1. **check created AMI.**
 
     ![](./static/20200822_163236.png)
 
-1. Create Launch Configuration.
+1. **Create Launch Configuration.**
 
     1. Click `Create Launch Configuration` button.
 
@@ -132,43 +169,43 @@
         ![](./static/20200822_163954.png)
 
 
-1. Create an Auto Scaling group.
+1. **Create an Auto Scaling group.**
 
     ![](./static/20200822_162705.png)
 
-1. Choose launch configuration.
+1. **Choose launch configuration.**
 
     ![](./static/20200822_164124.png)
 
-1. Configure settings.
+1. **Configure settings.**
 
     ![](./static/20200822_164227.png)
 
-1. Configure advanced options.
+1. **Configure advanced options.**
 
     ![](./static/20200822_164327.png)
 
-1. Configure groups size and scaling policies.
+1. **Configure groups size and scaling policies.**
 
     ![](./static/20200822_164517.png)
 
-1. Add notifications
+1.** Add notifications**
 
-1. Add Tags
+1. **Add Tags**
 
-1. Review and Create Auto Scaling group.
+1. **Review and Create Auto Scaling group.**
 
     ![](./static/20200822_164647.png)
 
-1. Go to your Target group page.
+1. **Go to your Target group page.**
 
     ![](./static/20200822_175917.png)
 
-1. Check your instances state.
+1. **Check your instances state.**
 
     ![](./static/20200822_175808.png)
 
-1. Check your auto created instances.
+1. **Check your auto created instances.**
 
     ![](./static/20200822_180214.png)
 
