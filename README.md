@@ -189,7 +189,7 @@
 
     ![](./static/20200822_164517.png)
 
-1.** Add notifications**
+1.**Add notifications**
 
 1. **Add Tags**
 
